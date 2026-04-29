@@ -220,9 +220,9 @@ export function ProductModal({
                       name="status"
                       value="active"
                       checked={formData.status === "active"}
-                      onChange={(e) =>
-                        setFormData({ ...formData, status: e.target.value })
-                      }
+                    //   onChange={(e) =>
+                    //     setFormData({ ...formData, status: e.target.value })
+                    //   }
                       className="h-4 w-4 border-slate-300 text-teal-600 focus:ring-teal-500"
                     />
                     <span className="text-sm font-medium text-slate-700">
@@ -235,9 +235,9 @@ export function ProductModal({
                       name="status"
                       value="inactive"
                       checked={formData.status === "inactive"}
-                      onChange={(e) =>
-                        setFormData({ ...formData, status: e.target.value })
-                      }
+                    //   onChange={(e) =>
+                    //     setFormData({ ...formData, status: e.target.value })
+                    //   }
                       className="h-4 w-4 border-slate-300 text-slate-600 focus:ring-slate-500"
                     />
                     <span className="text-sm font-medium text-slate-700">
