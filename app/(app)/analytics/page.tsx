@@ -50,55 +50,55 @@ export default function AnalyticsPage() {
   const userRole: UserRole = "admin"; // Change to "member" or "viewer" to test access control
 
   const hasFullAccess = ["owner", "admin"].includes(userRole);
-  const hasLimitedAccess = userRole === "member";
-  const isBlocked = userRole === "viewer";
+  // const hasLimitedAccess = userRole === "member";
+  // const isBlocked = userRole === "viewer";
 
   const [dateRange, setDateRange] = useState("30d");
   const [metricType, setMetricType] = useState("all");
 
-  // Blocked view
-  if (isBlocked) {
-    return (
-      <div className="space-y-6">
-        <div
-          style={{
-            animation: "hero-enter 600ms cubic-bezier(0.22, 1, 0.36, 1) both",
-          }}
-        >
-          <h1 className="text-3xl font-bold tracking-tight text-slate-900">
-            Analytics
-          </h1>
-          <p className="mt-2 text-sm text-slate-600">
-            Business performance insights and metrics
-          </p>
-        </div>
+  // // Blocked view
+  // if (isBlocked) {
+  //   return (
+  //     <div className="space-y-6">
+  //       <div
+  //         style={{
+  //           animation: "hero-enter 600ms cubic-bezier(0.22, 1, 0.36, 1) both",
+  //         }}
+  //       >
+  //         <h1 className="text-3xl font-bold tracking-tight text-slate-900">
+  //           Analytics
+  //         </h1>
+  //         <p className="mt-2 text-sm text-slate-600">
+  //           Business performance insights and metrics
+  //         </p>
+  //       </div>
 
-        <AccessBlocked userRole={userRole} />
-      </div>
-    );
-  }
+  //       <AccessBlocked userRole={userRole} />
+  //     </div>
+  //   );
+  // }
 
-  // Limited view
-  if (hasLimitedAccess) {
-    return (
-      <div className="space-y-6">
-        <div
-          style={{
-            animation: "hero-enter 600ms cubic-bezier(0.22, 1, 0.36, 1) both",
-          }}
-        >
-          <h1 className="text-3xl font-bold tracking-tight text-slate-900">
-            Analytics
-          </h1>
-          <p className="mt-2 text-sm text-slate-600">
-            Business performance insights and metrics
-          </p>
-        </div>
+  // // Limited view
+  // if (hasLimitedAccess) {
+  //   return (
+  //     <div className="space-y-6">
+  //       <div
+  //         style={{
+  //           animation: "hero-enter 600ms cubic-bezier(0.22, 1, 0.36, 1) both",
+  //         }}
+  //       >
+  //         <h1 className="text-3xl font-bold tracking-tight text-slate-900">
+  //           Analytics
+  //         </h1>
+  //         <p className="mt-2 text-sm text-slate-600">
+  //           Business performance insights and metrics
+  //         </p>
+  //       </div>
 
-        <LimitedAnalytics userRole={userRole} />
-      </div>
-    );
-  }
+  //       <LimitedAnalytics userRole={userRole} />
+  //     </div>
+  //   );
+  // }
 
   // Full access view
   return (
